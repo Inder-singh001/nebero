@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page.title }}</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .sidebar {
+        background: #343a40;
+        padding: 1rem;
+        min-height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        transition: transform 0.3s ease-in-out;
+      }
+      .sidebar ul {
+        list-style: none;
+        padding: 0;
+      }
+      .sidebar ul li {
+        padding: 0.5rem 0;
+      }
+      .sidebar ul li a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 0.5rem;
+        border-radius: 5px;
+      }
+      .sidebar ul li a:hover {
+        background: #495057;
+      }
+      .content {
+        margin-left: 250px;
+        padding: 1rem;
+      }
+      .sidebar-toggle {
+        display: none;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background: #343a40;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 1000;
+      }
+      @media (max-width: 768px) {
+        .sidebar {
+          transform: translateX(-100%);
+        }
+        .sidebar.active {
+          transform: translateX(0);
+        }
+        .content {
+          margin-left: 0;
+        }
+        .sidebar-toggle {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-md-3 col-lg-2 d-md-block sidebar" id="sidebar">
+          <ul>
+            {% for item in site.navigation %}
+            <li>
+              <a href="{{ item.url }}">{{ item.title }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </nav>
+        <main class="col-md-9 ms-sm-auto col-lg-10 content">
+          <article>
+            <h1>{{ page.title }}</h1>
+            <p>
+              <small>Published on {{ page.date | date: "%B %d, %Y" }}</small>
+            </p>
+            <div>{{ content }}</div>
+          </article>
+        </main>
+      </div>
+    </div>
+    <script>
+      function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
