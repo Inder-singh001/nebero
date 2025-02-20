@@ -15,23 +15,28 @@
         margin: 0;
         padding: 0;
       }
+
+      /* Sidebar styles */
       .sidebar {
         background: #343a40;
         padding: 1rem;
         min-height: 100vh;
         position: fixed;
         top: 0;
-        left: 0;
+        left: 0; /* Sidebar stays on the left */
         width: 250px;
         transition: transform 0.3s ease-in-out;
       }
+
       .sidebar ul {
         list-style: none;
         padding: 0;
       }
+
       .sidebar ul li {
         padding: 0.5rem 0;
       }
+
       .sidebar ul li a {
         color: #fff;
         text-decoration: none;
@@ -39,18 +44,23 @@
         padding: 0.5rem;
         border-radius: 5px;
       }
+
       .sidebar ul li a:hover {
         background: #495057;
       }
+
+      /* Main content area */
       .content {
-        margin-left: 250px;
-        padding: 1rem;
+        margin-left: 250px; /* Push content to the right */
+        padding: 2rem;
       }
+
+      /* Sidebar toggle button */
       .sidebar-toggle {
         display: none;
         position: fixed;
         top: 10px;
-        right: 10px;
+        left: 10px; /* Move the toggle button to the left */
         background: #343a40;
         color: white;
         border: none;
@@ -59,46 +69,51 @@
         cursor: pointer;
         z-index: 1000;
       }
+
+      /* Responsive behavior */
       @media (max-width: 768px) {
         .sidebar {
-          transform: translateX(-100%);
+          transform: translateX(-100%); /* Hide sidebar on small screens */
         }
         .sidebar.active {
-          transform: translateX(0);
+          transform: translateX(0); /* Show sidebar when active */
         }
         .content {
-          margin-left: 0;
+          margin-left: 0; /* Remove margin when sidebar is hidden */
         }
         .sidebar-toggle {
-          display: block;
+          display: block; /* Show toggle button */
         }
       }
     </style>
   </head>
   <body>
     <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+
     <div class="container-fluid">
       <div class="row">
-        <nav class="col-md-3 col-lg-2 d-md-block sidebar" id="sidebar">
+        <!-- Sidebar (Left Side) -->
+        <nav class="sidebar" id="sidebar">
           <ul>
-            {% for item in site.navigation %}
+            {% for item in site.data.navigation %}
             <li>
               <a href="{{ item.url }}">{{ item.title }}</a>
             </li>
             {% endfor %}
           </ul>
         </nav>
-        <main class="col-md-9 ms-sm-auto col-lg-10 content">
+
+        <!-- Main Content (Right Side) -->
+        <main class="content">
           <article>
             <h1>{{ page.title }}</h1>
-            <p>
-              <small>Published on {{ page.date | date: "%B %d, %Y" }}</small>
-            </p>
+            <p><small>Published on {{ page.date | date: "%B %d, %Y" }}</small></p>
             <div>{{ content }}</div>
           </article>
         </main>
       </div>
     </div>
+
     <script>
       function toggleSidebar() {
         document.getElementById("sidebar").classList.toggle("active");

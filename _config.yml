@@ -1,3 +1,4 @@
+theme: "minima"
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
@@ -20,12 +21,12 @@
 
 title: Nebero Documentation
 email: inderpreet@nebero.com
-description: My six-month internship journey in the workplace.
+# description: My six-month internship journey in the workplace.
 baseurl: "/nebero" 
 url: "https://inder-singh001.github.io" 
+theme: jekyll-theme-cayman
 
 # Build settings
-theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -55,6 +56,4 @@ navigation:
   - title: "Home"
     url: "/nebero/"
   - title: "Introduction"
-    url: "/nebero/introduction/"
-  - title: Blog
-    url: /blog/
+    url: "/nebero/2025/01/01/introduction/"
