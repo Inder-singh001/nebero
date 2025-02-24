@@ -42,8 +42,8 @@ if [ $? -ne 0 ]; then
 fi
 
 # Ask for branch name
-read -p "Enter branch name (default: main): " branch
-branch=${branch:-main}
+read -p "Enter branch name (default: master): " branch
+branch=${branch:-master}
 
 # Ensure the branch exists
 git branch | grep "$branch" > /dev/null
