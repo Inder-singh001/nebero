@@ -13,8 +13,8 @@ plugins:
 # Navigation Links
 navigation:
   - title: "Home"
-    url: "/nebero/"
+    url: "/"
   - title: "Introduction to Vue and Pinia"
-    url: "/nebero/2025/01/01/introduction/"
+    url: "/2025/01/01/introduction-vue-pinia"
   - title: "Project in Vue and Pinia"
-    url: "/nebero/2025/01/02/project/"
+    url: "/2025/01/02/project-vue-pinia"
