@@ -1,9 +1,3 @@
-_site
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-vendor
-
 # Ignore build-related files and folders
 *.log
 *.tmp
@@ -13,3 +7,27 @@ vendor
 # Ignore IDE/editor specific files
 .vscode/
 .idea/
+
+# Jekyll generated folder (the static site)
+_site/
+
+# Bundler dependencies (if using Bundler)
+.bundle/
+
+# Temporary files and directories created by Jekyll
+.sass-cache/
+.jekyll-cache
+.jekyll-metadata
+
+# Temporary files created by editors and OS
+.DS_Store
+Thumbs.db
+
+# Node modules (if using npm or Yarn)
+node_modules/
+
+# Gemfile lock (if using Bundler)
+Gemfile.lock
+
+# Files generated during build or deployment
+vendor/
