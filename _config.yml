@@ -15,6 +15,6 @@ navigation:
   - title: "Home"
     url: "/nebero/"
   - title: "Introduction to Vue and Pinia"
-    url: "/nebero/2025/01/01/introduction/to/Vue/and/Pinia"
+    url: "/nebero/2025/01/01/introduction/to/Vue/and/Pinia/"
   - title: "Project in Vue and Pinia"
-    url: "/nebero/2025/01/02/project/in/Vue/and/Pinia"
+    url: "/nebero/2025/01/02/project/in/Vue/and/Pinia/"
