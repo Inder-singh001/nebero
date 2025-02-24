@@ -16,5 +16,8 @@ navigation:
     url: "/"
   - title: "Introduction to Vue and Pinia"
     url: "/2025/01/01/introduction-vue-pinia"
-  - title: "Project in Vue and Pinia"
+  - title: "Vue & Pinia Practice Project"
     url: "/2025/01/02/project-vue-pinia"
+  - title: "Nebero Admin Portal"
+    url: "/2025/01/08/nebero-admin-portal"
+ 

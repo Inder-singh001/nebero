@@ -1,91 +1,89 @@
 ---
 layout: default
-title: "Project in Vue and Pinia"
+title: "Vue & Pinia Practice Project"
 ---
 
-# Vue Practice Project
+## Practice Project
 
-This project was created to practice and explore the **Vue.js framework**, along with **Express.js**, **Pinia**, and **Postman**. The repository can be found here: [nebero-vue](https://github.com/Inder-singh001/nebero-vue).
+I developed this project to dive deep into **Vue.js**, **Pinia**, and **Express.js**, while also practicing API integration and state management. The repository is available here: [nebero-vue](https://github.com/Inder-singh001/nebero-vue).
 
 ## Technologies Used
 
-- **Frontend:** Vue.js
-- **State Management:** Pinia
-- **Backend:** Express.js
-- **API Testing:** Postman
-- **Form Validation:** Vuelidate
-- **Routing:** Vue Router
+- **Vue.js** - Frontend framework
+- **Pinia** - State management
+- **Express.js** - Backend API
+- **Postman** - API testing
+- **Vuelidate** - Form validation
+- **Vue Router** - Routing
 
-## Learning & Implementation
+## Project Setup & Installation
 
-### Vue Installation Methods
+I explored different ways to set up a Vue project:
 
-I explored multiple ways to install and set up a Vue project:
+- Using Vue’s recommended method:
 
-- Using the basic `vue` command
-  
   ```sh
-    npm create vue@latest my-project
-    cd my-project
-    npm install
-    npm run dev
+  npm create vue@latest my-project
+  cd my-project
+  npm install
+  npm run dev
   ```
+
 - With Vue CLI:
 
   ```sh
-    npm install -g @vue/cli
-    vue create my-project
-    cd my-project
-    npm run serve
+  npm install -g @vue/cli
+  vue create my-project
+  cd my-project
+  npm run serve
   ```
 
-- Using CDN (Direct Inclusion in HTML):
+- Using Vue via CDN:
 
-  ```sh
-      <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  ```html
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   ```
 
-### Core Vue Concepts Applied
+## Features & Implementations
 
-- **Reactive Fundamentals:** Used `ref` and `reactive` for state management.
-- **Computed Properties:** Implemented derived state for optimized performance.
-- **Directives:** Applied built-in Vue directives like `v-if`, `v-for`, `v-model`, `v-bind`, etc.
-- **Lifecycle Hooks:** Used hooks such as `onMounted()` and `onUpdated()` for component lifecycle management.
-- **Form Handling:** Implemented form input handling with Vue's two-way binding.
-- **Props & Events:** Created reusable components, passing data via props and emitting custom events.
-
-## Project Features
-
-The project is structured as a **nested project** with **multiple mini-projects**, each demonstrating key Vue.js concepts:
+The project consists of multiple **mini-projects**, each focusing on a different Vue concept:
 
 ### 1. To-Do Task Manager
 
-- Add, delete, and update tasks.
+- Built a simple to-do app with **add, delete, and update** features.
 - Used **Pinia** for state management.
 
 ### 2. Calculator
 
-- Implemented a basic calculator with **reactive state**.
-- Handled mathematical operations dynamically.
+- Implemented a **reactive state** to handle dynamic calculations.
+- Used Vue’s event handling for real-time input processing.
 
 ### 3. Notes App
 
-- Create and delete notes dynamically.
-- Used **computed properties** to filter/search notes.
+- Created an app to **add and delete notes** dynamically.
+- Implemented **computed properties** for efficient filtering and searching.
 
 ### 4. User Management System
 
-- **User Form & Listing**
-  - Implemented a form to add users.
-  - Used **Vuelidate** for form validation.
-  - Displayed a list of users fetched from **Pinia store**.
-- **Routing:** Implemented navigation between components using `route` and `router` functions.
+- Designed a **user form** with **Vuelidate** for input validation.
+- Displayed user data fetched from a **Pinia store**.
+- Implemented **Vue Router** for component-based navigation.
 
 ### 5. Express.js API Integration
 
-- Built RESTful APIs using Express.js:
-  - **POST** - Create a new user/task.
-  - **PUT** - Update existing records.
+- Developed RESTful APIs for CRUD operations:
+  - **POST** - Create new users or tasks.
+  - **PUT** - Update records.
   - **DELETE** - Remove records.
-  - **GET** - Fetch user/task data.
-- Tested all API endpoints using **Postman**.
+  - **GET** - Fetch data.
+- Tested API endpoints using **Postman**.
+
+## Core Vue Concepts Applied
+
+- **Reactive State** - Used `ref` and `reactive` for managing component state.
+- **Computed Properties** - Implemented to optimize performance and handle derived state.
+- **Vue Directives** - Used `v-if`, `v-for`, `v-model`, and `v-bind` for dynamic rendering.
+- **Lifecycle Hooks** - Applied `onMounted()` and `onUpdated()` for state initialization and updates.
+- **Props & Events** - Created reusable components with prop-based data passing and event emission.
+
+This project allowed me to practice real-world Vue development while integrating **state management**, **backend API handling**, and **form validation** effectively.
