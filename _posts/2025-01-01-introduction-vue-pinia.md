@@ -2,9 +2,9 @@
 layout: default
 title: "Introduction to Vue and Pinia"
 ---
+---
 
 ## Introduction
----
 On my first day at Nebero Systems, I learned that the company primarily uses the Vue.js framework for development. To get up to speed, I was assigned the task of learning Vue and Pinia, which took me a week to grasp.
 
 ## Overview of Vue.js

@@ -2,7 +2,7 @@
 layout: default
 title: "Vue & Pinia Practice Project"
 ---
-
+---
 ## Practice Project
 
 I developed this project to dive deep into **Vue.js**, **Pinia**, and **Express.js**, while also practicing API integration and state management. The repository is available here: [nebero-vue](https://github.com/Inder-singh001/nebero-vue).

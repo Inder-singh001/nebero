@@ -2,7 +2,7 @@
 layout: default
 title: "Nebero Admin Portal"
 ---
-
+---
 ## Understanding the Nebero Admin Portal
 I was introduced to the Nebero admin portal. This helped me understand the existing system architecture, workflows, and how various components interact within the system. I took time to explore the administrative functionalities, database structures, and API integrations, which gave me a deeper insight into the backend and frontend relationships.
 

@@ -2,7 +2,7 @@
 layout: default
 title: "Nebero Agent Portal"
 ---
-
+---
 ## Introduction
 
 I got introduced to the agent portal of Nebero, where I was tasked with analyzing the existing codebase. My goal was to understand the structure and functionality of the project.
